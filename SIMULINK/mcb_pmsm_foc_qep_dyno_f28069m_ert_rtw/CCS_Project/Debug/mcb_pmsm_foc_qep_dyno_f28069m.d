@@ -1,0 +1,204 @@
+# FIXED
+
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m.c
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/rtwtypes.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000_shared/src/c2000BoardSupport.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/stdbool.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/_ti_config.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/linkage.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Device.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Adc.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_BootVars.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Cla.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Comp.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_CpuTimers.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_DevEmu.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Dma.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_ECan.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_ECap.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_EPwm.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_EQep.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Gpio.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_HRCap.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_I2c.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Mcbsp.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_NmiIntrupt.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_PieCtrl.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_PieVect.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Spi.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Sci.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_SysCtrl.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Usb.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_XIntrupt.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/DSP28xx_SciUtil.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/string.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/sys/cdefs.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/xlocale/_string.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_Examples.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_GlobalPrototypes.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_EPwm_defines.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_I2c_defines.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_Dma_defines.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_Cla_defines.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_DefaultISR.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/libs/math/IQmath/v160/include/IQmathLib.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/limits.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include/MW_SPI.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include/MW_digitalIO.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include/MW_SVD.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000/inc/MW_c2000ISR.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/ControlSUITE/controlSUITE/libs/utilities/hrcap_hccal/type0/v110/include/HCCal_Type0_V1.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000_shared/src/c2000SchedulerTimer.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m_types.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000/inc/MW_c2000SPI.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000/inc/MW_c28xSPI.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000_shared/inc/MW_c28xGPIO.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/rt_nonfinite.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/stddef.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/rtGetNaN.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m_private.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/math.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/_defs.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/sys/_types.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/machine/_types.h
+mcb_pmsm_foc_qep_dyno_f28069m.obj: D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/machine/_limits.h
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m.c:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/rtwtypes.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000_shared/src/c2000BoardSupport.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/stdbool.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/_ti_config.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/linkage.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Device.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Adc.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_BootVars.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Cla.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Comp.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_CpuTimers.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_DevEmu.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Dma.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_ECan.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_ECap.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_EPwm.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_EQep.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Gpio.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_HRCap.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_I2c.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Mcbsp.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_NmiIntrupt.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_PieCtrl.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_PieVect.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Spi.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Sci.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_SysCtrl.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_Usb.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_headers/include/F2806x_XIntrupt.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/DSP28xx_SciUtil.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/string.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/sys/cdefs.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/xlocale/_string.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_Examples.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_GlobalPrototypes.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_EPwm_defines.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_I2c_defines.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_Dma_defines.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_Cla_defines.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/device_support/f2806x/v151/F2806x_common/include/F2806x_DefaultISR.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/libs/math/IQmath/v160/include/IQmathLib.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/limits.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include/MW_SPI.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include/MW_digitalIO.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include/MW_SVD.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000/inc/MW_c2000ISR.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h:
+
+D:/TiC2000_Install/ControlSUITE/controlSUITE/libs/utilities/hrcap_hccal/type0/v110/include/HCCal_Type0_V1.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000_shared/src/c2000SchedulerTimer.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m_types.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000/inc/MW_c2000SPI.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000/inc/MW_c28xSPI.h:
+
+C:/Program\ Files/MATLAB/R2023b/toolbox/c2b/tic2000_shared/inc/MW_c28xGPIO.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/rt_nonfinite.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/stddef.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/rtGetNaN.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/MW_target_hardware_resources.h:
+
+E:/GiaotrinhDH/DATN/SIMULINK/mcb_pmsm_foc_qep_dyno_f28069m_ert_rtw/mcb_pmsm_foc_qep_dyno_f28069m_private.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/math.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/_defs.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/sys/_types.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/machine/_types.h:
+
+D:/TiC2000_Install/CCS/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/machine/_limits.h:
+

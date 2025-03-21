@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tt xml:lang="en" xmlns="http://www.w3.org/ns/ttml" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" ttp:profile="http://www.w3.org/TR/profile/sdp-us" >
+<head>
+<styling>
+<style xml:id="s1" tts:textAlign="center" tts:extent="90% 90%" tts:origin="5% 5%" tts:displayAlign="after"/>
+<style xml:id="s2" tts:fontSize=".72c" tts:backgroundColor="black" tts:color="white"/>
+</styling>
+<layout>
+<region xml:id="r1" style="s1"/>
+</layout>
+</head>
+<body region="r1">
+<div>
+<p begin="00:00:00.030" end="00:00:04.410" style="s2">hi everyone my name is Antonin and I</p>
+<p begin="00:00:02.669" end="00:00:07.620" style="s2">will present today how to control two</p>
+<p begin="00:00:04.410" end="00:00:11.160" style="s2">three-phase brushless motors using one</p>
+<p begin="00:00:07.620" end="00:00:14.130" style="s2">f28 269 Launchpad there is a</p>
+<p begin="00:00:11.160" end="00:00:16.199" style="s2">prerequisite to better understand this</p>
+<p begin="00:00:14.130" end="00:00:18.660" style="s2">example I strongly recommend you watch</p>
+<p begin="00:00:16.199" end="00:00:22.340" style="s2">the video entitled simile motor control</p>
+<p begin="00:00:18.660" end="00:00:26.130" style="s2">with TI launchpad this previous video is</p>
+<p begin="00:00:22.340" end="00:00:28.170" style="s2">controlling one motor with an f28 2 to 7</p>
+<p begin="00:00:26.130" end="00:00:30.539" style="s2">launchpad I strongly recommend you go</p>
+<p begin="00:00:28.170" end="00:00:32.969" style="s2">through this video as it will explain</p>
+<p begin="00:00:30.539" end="00:00:36.840" style="s2">how to install the support packages</p>
+<p begin="00:00:32.969" end="00:00:38.700" style="s2">needed for this particular example so</p>
+<p begin="00:00:36.840" end="00:00:41.129" style="s2">here is the list of hardware required</p>
+<p begin="00:00:38.700" end="00:00:44.250" style="s2">for this demo you need an F 2806 9</p>
+<p begin="00:00:41.129" end="00:00:46.170" style="s2">Launchpad you need to boost Excel DRV</p>
+<p begin="00:00:44.250" end="00:00:49.410" style="s2">8301 booster packs</p>
+<p begin="00:00:46.170" end="00:00:51.420" style="s2">note that the f28 o-69 Launchpad can</p>
+<p begin="00:00:49.410" end="00:00:53.460" style="s2">take two booster packs at the same time</p>
+<p begin="00:00:51.420" end="00:00:55.739" style="s2">and these are the inverters so we&#39;re</p>
+<p begin="00:00:53.460" end="00:00:58.920" style="s2">gonna use one for each motor and you</p>
+<p begin="00:00:55.739" end="00:01:02.219" style="s2">need of course to PMS M three-phase</p>
+<p begin="00:00:58.920" end="00:01:04.049" style="s2">motors there is a packaged mini Dino kit</p>
+<p begin="00:01:02.219" end="00:01:07.409" style="s2">that you can get from Ti this is the</p>
+<p begin="00:01:04.049" end="00:01:09.990" style="s2">product code to MTR - Dino or you can</p>
+<p begin="00:01:07.409" end="00:01:12.930" style="s2">use any two PMS M motors that may be</p>
+<p begin="00:01:09.990" end="00:01:16.590" style="s2">shipping with other kids so here is what</p>
+<p begin="00:01:12.930" end="00:01:18.720" style="s2">I have on my table this is my F 2806 9</p>
+<p begin="00:01:16.590" end="00:01:21.960" style="s2">launch pad you can see the two slots for</p>
+<p begin="00:01:18.720" end="00:01:26.009" style="s2">the two booster packs this is my first</p>
+<p begin="00:01:21.960" end="00:01:28.920" style="s2">booster pack which is connected here to</p>
+<p begin="00:01:26.009" end="00:01:32.130" style="s2">this motor there are a lot of cables</p>
+<p begin="00:01:28.920" end="00:01:34.590" style="s2">here these are my QEP and Hall sensor</p>
+<p begin="00:01:32.130" end="00:01:37.680" style="s2">cables they are not connected today</p>
+<p begin="00:01:34.590" end="00:01:41.490" style="s2">because running sense or less the hole</p>
+<p begin="00:01:37.680" end="00:01:43.439" style="s2">sensors and QEP cable for the second</p>
+<p begin="00:01:41.490" end="00:01:46.259" style="s2">motor and you can see that the second</p>
+<p begin="00:01:43.439" end="00:01:48.329" style="s2">motor is connected to the second booster</p>
+<p begin="00:01:46.259" end="00:01:54.890" style="s2">pack so I&#39;m going to connect both of</p>
+<p begin="00:01:48.329" end="00:01:54.890" style="s2">them to the f28 o-69 launchpad</p>
+<p begin="00:01:58.680" end="00:02:04.860" style="s2">there is no dumb proof connector so make</p>
+<p begin="00:02:01.860" end="00:02:09.119" style="s2">sure that you connect them correctly I</p>
+<p begin="00:02:04.860" end="00:02:11.220" style="s2">have a power supply here it&#39;s just a</p>
+<p begin="00:02:09.119" end="00:02:13.560" style="s2">laptop power supply that&#39;s not connected</p>
+<p begin="00:02:11.220" end="00:02:16.290" style="s2">right now that&#39;s gonna give me 20 volts</p>
+<p begin="00:02:13.560" end="00:02:19.590" style="s2">and I have shared that power supplied</p>
+<p begin="00:02:16.290" end="00:02:23.490" style="s2">across the two booster packs I also have</p>
+<p begin="00:02:19.590" end="00:02:27.900" style="s2">my 5 volt USB cable that I can connect</p>
+<p begin="00:02:23.490" end="00:02:30.570" style="s2">to my computer which will power the f28</p>
+<p begin="00:02:27.900" end="00:02:32.580" style="s2">or 6:9 launchpad and installation</p>
+<p begin="00:02:30.570" end="00:02:35.580" style="s2">functions that are good to remember</p>
+<p begin="00:02:32.580" end="00:02:37.740" style="s2">targets installer to install new support</p>
+<p begin="00:02:35.580" end="00:02:40.350" style="s2">packages target the Baader to make sure</p>
+<p begin="00:02:37.740" end="00:02:43.140" style="s2">that the third-party tools are correctly</p>
+<p begin="00:02:40.350" end="00:02:46.020" style="s2">installed and checky and be set up and</p>
+<p begin="00:02:43.140" end="00:02:50.760" style="s2">in this case it&#39;s good to run it against</p>
+<p begin="00:02:46.020" end="00:02:52.890" style="s2">CCS b5 or v6 f28 o-69 check that&#39;s</p>
+<p begin="00:02:50.760" end="00:02:55.530" style="s2">probably the configuration that will be</p>
+<p begin="00:02:52.890" end="00:02:58.050" style="s2">useful today so let me go to the Similan</p>
+<p begin="00:02:55.530" end="00:02:59.820" style="s2">model so here is what I use to control</p>
+<p begin="00:02:58.050" end="00:03:01.560" style="s2">the two motor so I&#39;m just gonna generate</p>
+<p begin="00:02:59.820" end="00:03:04.170" style="s2">code and run it and then I will go</p>
+<p begin="00:03:01.560" end="00:03:07.320" style="s2">through explanations on how I got there</p>
+<p begin="00:03:04.170" end="00:03:09.630" style="s2">so I can press that Bell button it will</p>
+<p begin="00:03:07.320" end="00:03:13.410" style="s2">generate code for this model it will</p>
+<p begin="00:03:09.630" end="00:03:17.340" style="s2">invoke the CCS compiler and it will load</p>
+<p begin="00:03:13.410" end="00:03:20.130" style="s2">the code on the f28 o-69 launchpad that</p>
+<p begin="00:03:17.340" end="00:03:20.790" style="s2">I have connected right now to my USB</p>
+<p begin="00:03:20.130" end="00:03:23.730" style="s2">cable</p>
+<p begin="00:03:20.790" end="00:03:25.980" style="s2">I haven&#39;t connected high power yet let&#39;s</p>
+<p begin="00:03:23.730" end="00:03:29.670" style="s2">wait until we load the code then we&#39;ll</p>
+<p begin="00:03:25.980" end="00:03:31.680" style="s2">we can start the 20 volt to spin the</p>
+<p begin="00:03:29.670" end="00:03:35.910" style="s2">motors you can click on the view</p>
+<p begin="00:03:31.680" end="00:03:37.680" style="s2">diagnostic to follow the build steps you</p>
+<p begin="00:03:35.910" end="00:03:40.769" style="s2">can see the generated code being</p>
+<p begin="00:03:37.680" end="00:03:43.890" style="s2">compiled here we call a scripting tool</p>
+<p begin="00:03:40.769" end="00:03:47.100" style="s2">provided by CCS to load the code onto</p>
+<p begin="00:03:43.890" end="00:03:50.340" style="s2">the target my debug session is starting</p>
+<p begin="00:03:47.100" end="00:03:53.370" style="s2">I&#39;m connecting to my target and my code</p>
+<p begin="00:03:50.340" end="00:03:58.970" style="s2">is loaded on my target it&#39;s a little</p>
+<p begin="00:03:53.370" end="00:03:58.970" style="s2">hard to see but I have an LED blinking</p>
+<p begin="00:03:59.540" end="00:04:04.530" style="s2">yeah you can see it here it&#39;s a blue LED</p>
+<p begin="00:04:02.190" end="00:04:07.650" style="s2">blinking just to see that the code is</p>
+<p begin="00:04:04.530" end="00:04:10.230" style="s2">running properly alright so the code is</p>
+<p begin="00:04:07.650" end="00:04:12.210" style="s2">flashed on the target so what I&#39;m gonna</p>
+<p begin="00:04:10.230" end="00:04:14.820" style="s2">do is I&#39;m gonna this</p>
+<p begin="00:04:12.210" end="00:04:18.570" style="s2">connect my USB cable so now nothing&#39;s</p>
+<p begin="00:04:14.820" end="00:04:20.880" style="s2">powered I&#39;m going to connect my high</p>
+<p begin="00:04:18.570" end="00:04:24.300" style="s2">voltage I mean high voltage it&#39;s only 20</p>
+<p begin="00:04:20.880" end="00:04:26.750" style="s2">volts but this should spin the motors</p>
+<p begin="00:04:24.300" end="00:04:32.730" style="s2">now it should boot the code and provide</p>
+<p begin="00:04:26.750" end="00:04:36.780" style="s2">high power at the same time and now you</p>
+<p begin="00:04:32.730" end="00:04:38.940" style="s2">can see that both motors are spinning on</p>
+<p begin="00:04:36.780" end="00:04:40.890" style="s2">my dyno you can notice I haven&#39;t</p>
+<p begin="00:04:38.940" end="00:04:42.810" style="s2">connected the two motors together</p>
+<p begin="00:04:40.890" end="00:04:45.540" style="s2">they&#39;re just freely spinning right now</p>
+<p begin="00:04:42.810" end="00:04:47.790" style="s2">for the sake of the example of course</p>
+<p begin="00:04:45.540" end="00:04:49.980" style="s2">one thing you can do in the future is</p>
+<p begin="00:04:47.790" end="00:04:52.860" style="s2">connect these two and have one drive the</p>
+<p begin="00:04:49.980" end="00:04:55.380" style="s2">other and have one motor act as a load</p>
+<p begin="00:04:52.860" end="00:04:58.500" style="s2">while the other would be the motor on</p>
+<p begin="00:04:55.380" end="00:05:01.230" style="s2">the test so how did I get there so here</p>
+<p begin="00:04:58.500" end="00:05:04.050" style="s2">is my civic model one thing very</p>
+<p begin="00:05:01.230" end="00:05:06.270" style="s2">important always enable colors in your</p>
+<p begin="00:05:04.050" end="00:05:09.210" style="s2">model and if you look at the sample time</p>
+<p begin="00:05:06.270" end="00:05:11.460" style="s2">legend we have multiple colors here we</p>
+<p begin="00:05:09.210" end="00:05:14.730" style="s2">have this red red group which is running</p>
+<p begin="00:05:11.460" end="00:05:17.490" style="s2">at 50 micro we have one interrupt which</p>
+<p begin="00:05:14.730" end="00:05:20.100" style="s2">is asynchronous and I can tell you it&#39;s</p>
+<p begin="00:05:17.490" end="00:05:22.200" style="s2">running also at 50 micro so I&#39;m running</p>
+<p begin="00:05:20.100" end="00:05:25.860" style="s2">these two motors at a twenty kilohertz</p>
+<p begin="00:05:22.200" end="00:05:27.840" style="s2">right I have a speed control loop every</p>
+<p begin="00:05:25.860" end="00:05:30.030" style="s2">10 milli so every 10 million I&#39;m gonna</p>
+<p begin="00:05:27.840" end="00:05:32.160" style="s2">refresh my torque demand to both of</p>
+<p begin="00:05:30.030" end="00:05:35.820" style="s2">these torque control loops for each</p>
+<p begin="00:05:32.160" end="00:05:38.850" style="s2">motor and I have my LED blink at 0.5 so</p>
+<p begin="00:05:35.820" end="00:05:41.370" style="s2">I&#39;m toggling the LED every 0.5 which</p>
+<p begin="00:05:38.850" end="00:05:43.350" style="s2">gives me a blinking period of one sec so</p>
+<p begin="00:05:41.370" end="00:05:45.780" style="s2">there are a few modeling concepts that I</p>
+<p begin="00:05:43.350" end="00:05:49.530" style="s2">would like to show with this demo so the</p>
+<p begin="00:05:45.780" end="00:05:51.330" style="s2">first one is the target selection make</p>
+<p begin="00:05:49.530" end="00:05:55.520" style="s2">sure you&#39;ve selected the right target</p>
+<p begin="00:05:51.330" end="00:06:00.210" style="s2">the f28 o-69 launchpad comes with an F</p>
+<p begin="00:05:55.520" end="00:06:03.060" style="s2">2806 9 m and the M is very important in</p>
+<p begin="00:06:00.210" end="00:06:06.540" style="s2">that case it doesn&#39;t have the same</p>
+<p begin="00:06:03.060" end="00:06:11.670" style="s2">memory map as the other f28 to 69 so you</p>
+<p begin="00:06:06.540" end="00:06:14.370" style="s2">need to select the C 2806 9 m dot CMD</p>
+<p begin="00:06:11.670" end="00:06:17.790" style="s2">file it&#39;s not the same linker command</p>
+<p begin="00:06:14.370" end="00:06:21.000" style="s2">file as the regular f28 or 69 the</p>
+<p begin="00:06:17.790" end="00:06:23.520" style="s2">devices are similar but the IQ math</p>
+<p begin="00:06:21.000" end="00:06:24.720" style="s2">tables are located at a different memory</p>
+<p begin="00:06:23.520" end="00:06:27.180" style="s2">location for the</p>
+<p begin="00:06:24.720" end="00:06:29.460" style="s2">device so it&#39;s very important that you</p>
+<p begin="00:06:27.180" end="00:06:31.500" style="s2">select that M device which is provided</p>
+<p begin="00:06:29.460" end="00:06:34.020" style="s2">out of the box just press the Browse</p>
+<p begin="00:06:31.500" end="00:06:41.180" style="s2">button and you have all of them provided</p>
+<p begin="00:06:34.020" end="00:06:43.530" style="s2">here the plano 69 the 689 F and the 69 m</p>
+<p begin="00:06:41.180" end="00:06:45.360" style="s2">second modeling concept that I would</p>
+<p begin="00:06:43.530" end="00:06:48.660" style="s2">like to demonstrate is the PWM</p>
+<p begin="00:06:45.360" end="00:06:50.640" style="s2">synchronization so I have two motors and</p>
+<p begin="00:06:48.660" end="00:06:52.950" style="s2">the first motor is going to be</p>
+<p begin="00:06:50.640" end="00:06:55.080" style="s2">controlled by this side of the model</p>
+<p begin="00:06:52.950" end="00:06:57.450" style="s2">while the second motor is going to be</p>
+<p begin="00:06:55.080" end="00:07:00.930" style="s2">controlled by this side of the model the</p>
+<p begin="00:06:57.450" end="00:07:03.210" style="s2">two pwms have to be synchronized what I</p>
+<p begin="00:07:00.930" end="00:07:05.820" style="s2">do for that is I&#39;m using PWM one two</p>
+<p begin="00:07:03.210" end="00:07:10.050" style="s2">three four the first motor and they&#39;re</p>
+<p begin="00:07:05.820" end="00:07:12.840" style="s2">triggering ad C a0 and b0 which are</p>
+<p begin="00:07:10.050" end="00:07:17.880" style="s2">sensing my eye a and IB for the first</p>
+<p begin="00:07:12.840" end="00:07:20.130" style="s2">motor I am using PWM four five six for</p>
+<p begin="00:07:17.880" end="00:07:26.250" style="s2">the second motor and they&#39;re triggering</p>
+<p begin="00:07:20.130" end="00:07:29.490" style="s2">ADC a3 and b3 so now like I demonstrated</p>
+<p begin="00:07:26.250" end="00:07:32.250" style="s2">before the PWM s are synchronized so the</p>
+<p begin="00:07:29.490" end="00:07:36.840" style="s2">first 3 1 2 &amp; 3 are synchronized</p>
+<p begin="00:07:32.250" end="00:07:39.900" style="s2">together and the counters are just in</p>
+<p begin="00:07:36.840" end="00:07:42.360" style="s2">sync with each other the way I ensure</p>
+<p begin="00:07:39.900" end="00:07:47.310" style="s2">this is by sending the synchronization</p>
+<p begin="00:07:42.360" end="00:07:50.220" style="s2">pulse between PWM 1 2 &amp; 3 the way you do</p>
+<p begin="00:07:47.310" end="00:07:53.910" style="s2">this is you set here synchronization</p>
+<p begin="00:07:50.220" end="00:07:58.260" style="s2">output and I&#39;m gonna send the pulse when</p>
+<p begin="00:07:53.910" end="00:08:01.320" style="s2">the counter equals zero okay so this</p>
+<p begin="00:07:58.260" end="00:08:03.660" style="s2">will send the pulse to PWM 2 now you can</p>
+<p begin="00:08:01.320" end="00:08:06.150" style="s2">see on this first one I&#39;m not reacting</p>
+<p begin="00:08:03.660" end="00:08:08.880" style="s2">on any pulse synchronization action is</p>
+<p begin="00:08:06.150" end="00:08:11.640" style="s2">disabled this is the initiator of the</p>
+<p begin="00:08:08.880" end="00:08:14.220" style="s2">pulse so it&#39;s my reference for the</p>
+<p begin="00:08:11.640" end="00:08:17.580" style="s2">synchronization now if I go to PWM 2</p>
+<p begin="00:08:14.220" end="00:08:20.490" style="s2">when counter of PWM 1 equals zero it</p>
+<p begin="00:08:17.580" end="00:08:23.430" style="s2">will send the synchronization pulse PWM</p>
+<p begin="00:08:20.490" end="00:08:26.370" style="s2">2 reacts on it by setting its own</p>
+<p begin="00:08:23.430" end="00:08:28.050" style="s2">counter to zero in that respect both of</p>
+<p begin="00:08:26.370" end="00:08:31.350" style="s2">them are synchronized they&#39;re all going</p>
+<p begin="00:08:28.050" end="00:08:34.650" style="s2">to be set to zero at the same time PWM 2</p>
+<p begin="00:08:31.350" end="00:08:37.770" style="s2">also outputs a synchronization pulse to</p>
+<p begin="00:08:34.650" end="00:08:38.430" style="s2">PWM 3 and in that case it&#39;s just a</p>
+<p begin="00:08:37.770" end="00:08:41.180" style="s2">pass-through</p>
+<p begin="00:08:38.430" end="00:08:45.360" style="s2">we don&#39;t want to do anything PWM one is</p>
+<p begin="00:08:41.180" end="00:08:50.029" style="s2">eventually going to reach PWM 3 via PWM</p>
+<p begin="00:08:45.360" end="00:08:53.970" style="s2">to with a pass through here on PWM 3</p>
+<p begin="00:08:50.029" end="00:08:55.860" style="s2">same as PWM - I&#39;m gonna react on the</p>
+<p begin="00:08:53.970" end="00:08:59.130" style="s2">synchronization pulse by setting a</p>
+<p begin="00:08:55.860" end="00:09:01.380" style="s2">counter phase value to zero or one thing</p>
+<p begin="00:08:59.130" end="00:09:03.959" style="s2">I forgot to mention once you set this to</p>
+<p begin="00:09:01.380" end="00:09:06.029" style="s2">zero it has to count up after sync</p>
+<p begin="00:09:03.959" end="00:09:07.620" style="s2">because it&#39;s a counting mode is up and</p>
+<p begin="00:09:06.029" end="00:09:10.020" style="s2">down so when you reach zero obviously</p>
+<p begin="00:09:07.620" end="00:09:13.290" style="s2">after that you want to count up this is</p>
+<p begin="00:09:10.020" end="00:09:17.670" style="s2">important this also has to be set on PWM</p>
+<p begin="00:09:13.290" end="00:09:21.570" style="s2">- now what PWM is 3 does in the previous</p>
+<p begin="00:09:17.670" end="00:09:23.220" style="s2">video with the f28 o27 launchpad it was</p>
+<p begin="00:09:21.570" end="00:09:25.620" style="s2">just disabling the output because</p>
+<p begin="00:09:23.220" end="00:09:27.870" style="s2">nothing was there after that now I have</p>
+<p begin="00:09:25.620" end="00:09:31.290" style="s2">a second motor to synchronize so here I</p>
+<p begin="00:09:27.870" end="00:09:35.250" style="s2">am passing the synchronization output</p>
+<p begin="00:09:31.290" end="00:09:39.440" style="s2">pulse and this will reach PWM 4 so now</p>
+<p begin="00:09:35.250" end="00:09:39.440" style="s2">let&#39;s look at what we do with PWM for</p>
+<p begin="00:09:40.010" end="00:09:47.580" style="s2">PWM 4 is for the second motor and now</p>
+<p begin="00:09:44.339" end="00:09:51.600" style="s2">what I&#39;m going to do is I&#39;m going to</p>
+<p begin="00:09:47.580" end="00:09:54.390" style="s2">synchronize the counter of PWM 4 to the</p>
+<p begin="00:09:51.600" end="00:09:58.290" style="s2">counter period instead of synchronizing</p>
+<p begin="00:09:54.390" end="00:10:01.920" style="s2">it to 0 and 1 PWM 1 2 3 are reaching</p>
+<p begin="00:09:58.290" end="00:10:03.959" style="s2">zero PWM 4 is reaching the counter</p>
+<p begin="00:10:01.920" end="00:10:07.170" style="s2">period and you will see that I&#39;m going</p>
+<p begin="00:10:03.959" end="00:10:09.839" style="s2">to do the same with 5 &amp; 6 so 4 5 6 are</p>
+<p begin="00:10:07.170" end="00:10:12.029" style="s2">going to be set to the period while 1 2</p>
+<p begin="00:10:09.839" end="00:10:16.220" style="s2">3 are going to be set to 0 so in that</p>
+<p begin="00:10:12.029" end="00:10:19.050" style="s2">respect there defaced by 180 degrees</p>
+<p begin="00:10:16.220" end="00:10:21.089" style="s2">same deal I&#39;m passing the</p>
+<p begin="00:10:19.050" end="00:10:25.200" style="s2">synchronization output pulse as a</p>
+<p begin="00:10:21.089" end="00:10:29.430" style="s2">pass-through so that will reach PWM 5</p>
+<p begin="00:10:25.200" end="00:10:33.540" style="s2">and PWM 5 is going to be the same as PWM</p>
+<p begin="00:10:29.430" end="00:10:35.700" style="s2">for setting the periods when you reach</p>
+<p begin="00:10:33.540" end="00:10:38.250" style="s2">the pulse and you can notice here the</p>
+<p begin="00:10:35.700" end="00:10:40.620" style="s2">countdown after sync when we reach the</p>
+<p begin="00:10:38.250" end="00:10:42.360" style="s2">period we want to count down and the</p>
+<p begin="00:10:40.620" end="00:10:46.110" style="s2">same I&#39;m passing the synchronization</p>
+<p begin="00:10:42.360" end="00:10:48.240" style="s2">output PWM 6 is going to be the same</p>
+<p begin="00:10:46.110" end="00:10:50.050" style="s2">with the little difference that there is</p>
+<p begin="00:10:48.240" end="00:10:52.749" style="s2">nobody after that</p>
+<p begin="00:10:50.050" end="00:10:55.959" style="s2">the synchronization output reaches</p>
+<p begin="00:10:52.749" end="00:10:58.749" style="s2">finally a dead end and it&#39;s now disabled</p>
+<p begin="00:10:55.959" end="00:11:00.879" style="s2">so here is a picture that summarizes</p>
+<p begin="00:10:58.749" end="00:11:05.019" style="s2">what&#39;s happening in this model we have</p>
+<p begin="00:11:00.879" end="00:11:06.850" style="s2">our PWM sync triggering when the PWM one</p>
+<p begin="00:11:05.019" end="00:11:10.059" style="s2">counter reaches zero and that</p>
+<p begin="00:11:06.850" end="00:11:14.049" style="s2">synchronizes the counters of PWM 1 2 &amp; 3</p>
+<p begin="00:11:10.059" end="00:11:14.829" style="s2">the PWM sync will also synchronize PWM 4</p>
+<p begin="00:11:14.049" end="00:11:19.480" style="s2">5 6</p>
+<p begin="00:11:14.829" end="00:11:21.329" style="s2">when PWM 1 is 0 PWM 4 5 6 will be set to</p>
+<p begin="00:11:19.480" end="00:11:23.860" style="s2">the counter period and we&#39;ll count down</p>
+<p begin="00:11:21.329" end="00:11:26.739" style="s2">after the synchronization you can see</p>
+<p begin="00:11:23.860" end="00:11:30.069" style="s2">the ADC triggers happening on the</p>
+<p begin="00:11:26.739" end="00:11:33.699" style="s2">periods of PWM 1 2 3 as well as the</p>
+<p begin="00:11:30.069" end="00:11:38.170" style="s2">periods of PWM 4 5 6 the ADC trigger of</p>
+<p begin="00:11:33.699" end="00:11:40.149" style="s2">PWM 1 2 3 will trigger ADC a 0 B 0 at</p>
+<p begin="00:11:38.170" end="00:11:42.160" style="s2">the end of the ADC conversion an</p>
+<p begin="00:11:40.149" end="00:11:43.980" style="s2">interrupt is generated and that will</p>
+<p begin="00:11:42.160" end="00:11:48.339" style="s2">trigger the field oriented control</p>
+<p begin="00:11:43.980" end="00:11:51.910" style="s2">algorithm for motor one when PWM 4 5 6</p>
+<p begin="00:11:48.339" end="00:11:54.790" style="s2">reaches the periods ADC trigger number 2</p>
+<p begin="00:11:51.910" end="00:11:57.730" style="s2">is happening and this will trigger ADC</p>
+<p begin="00:11:54.790" end="00:12:00.220" style="s2">a3 and b3 at the end of the conversion</p>
+<p begin="00:11:57.730" end="00:12:01.720" style="s2">an interrupt is generated and that will</p>
+<p begin="00:12:00.220" end="00:12:05.049" style="s2">trigger the field oriented control</p>
+<p begin="00:12:01.720" end="00:12:09.009" style="s2">algorithm for motor number 2 you can</p>
+<p begin="00:12:05.049" end="00:12:12.670" style="s2">notice that full PWM periods is set to</p>
+<p begin="00:12:09.009" end="00:12:16.389" style="s2">20 kilohertz or 50 microseconds so that</p>
+<p begin="00:12:12.670" end="00:12:18.939" style="s2">gives us about 25 microsecond maximum</p>
+<p begin="00:12:16.389" end="00:12:21.879" style="s2">for the ADC conversion and the field or</p>
+<p begin="00:12:18.939" end="00:12:23.980" style="s2">ant control algorithm for each motor so</p>
+<p begin="00:12:21.879" end="00:12:26.529" style="s2">you can notice that our code is running</p>
+<p begin="00:12:23.980" end="00:12:29.619" style="s2">pretty efficiently as it has to complete</p>
+<p begin="00:12:26.529" end="00:12:32.139" style="s2">within that 25 microsecond and leave</p>
+<p begin="00:12:29.619" end="00:12:34.899" style="s2">enough time for the lowest priority</p>
+<p begin="00:12:32.139" end="00:12:36.639" style="s2">tasks to execute the last modeling</p>
+<p begin="00:12:34.899" end="00:12:38.860" style="s2">concept I wanted to talk about is the</p>
+<p begin="00:12:36.639" end="00:12:41.679" style="s2">ability to trigger the Similan scheduler</p>
+<p begin="00:12:38.860" end="00:12:44.079" style="s2">based on an ADC interrupt if I go back</p>
+<p begin="00:12:41.679" end="00:12:46.209" style="s2">to my model you may have noticed that I</p>
+<p begin="00:12:44.079" end="00:12:48.610" style="s2">only have one interrupt that&#39;s</p>
+<p begin="00:12:46.209" end="00:12:52.419" style="s2">triggering the FOC algorithm for motor</p>
+<p begin="00:12:48.610" end="00:12:54.429" style="s2">number 2 I could create the same model</p>
+<p begin="00:12:52.419" end="00:12:56.949" style="s2">with two interrupts one for motor one</p>
+<p begin="00:12:54.429" end="00:12:58.600" style="s2">one for motor - the problem when we use</p>
+<p begin="00:12:56.949" end="00:13:01.809" style="s2">interrupts is you get that purple color</p>
+<p begin="00:12:58.600" end="00:13:03.100" style="s2">and similar ink loses the ability to</p>
+<p begin="00:13:01.809" end="00:13:05.920" style="s2">know that this is a pair</p>
+<p begin="00:13:03.100" end="00:13:10.000" style="s2">Eric interrupts which is associated with</p>
+<p begin="00:13:05.920" end="00:13:13.600" style="s2">a fixed sample time we can fix it for at</p>
+<p begin="00:13:10.000" end="00:13:16.240" style="s2">least one interrupt if I go to my config</p>
+<p begin="00:13:13.600" end="00:13:19.870" style="s2">set I have the ability to tell Simulink</p>
+<p begin="00:13:16.240" end="00:13:22.210" style="s2">to trigger the scheduler based on the</p>
+<p begin="00:13:19.870" end="00:13:25.180" style="s2">ADC interrupts instead of the standard</p>
+<p begin="00:13:22.210" end="00:13:27.790" style="s2">timer 0 by default the scheduler</p>
+<p begin="00:13:25.180" end="00:13:31.570" style="s2">interrupts source is set to timer 0 when</p>
+<p begin="00:13:27.790" end="00:13:34.330" style="s2">we do this we book CPU timer 0 we set</p>
+<p begin="00:13:31.570" end="00:13:36.580" style="s2">the periodicity of timer 0 to the base</p>
+<p begin="00:13:34.330" end="00:13:38.860" style="s2">rate of the Simulink model and that</p>
+<p begin="00:13:36.580" end="00:13:42.160" style="s2">triggers an interrupt at fixed interval</p>
+<p begin="00:13:38.860" end="00:13:45.580" style="s2">that&#39;s the red color in my model here I</p>
+<p begin="00:13:42.160" end="00:13:48.640" style="s2">have the ability to say I have set my</p>
+<p begin="00:13:45.580" end="00:13:51.580" style="s2">ADC interrupt to a specific rate</p>
+<p begin="00:13:48.640" end="00:13:54.640" style="s2">now please similarly use that interrupt</p>
+<p begin="00:13:51.580" end="00:13:56.980" style="s2">to schedule the entire scheduler instead</p>
+<p begin="00:13:54.640" end="00:13:59.860" style="s2">of timer 0 and that&#39;s what we do here</p>
+<p begin="00:13:56.980" end="00:14:02.500" style="s2">that offers the ability to keep a known</p>
+<p begin="00:13:59.860" end="00:14:05.080" style="s2">sample time and use blocks that would</p>
+<p begin="00:14:02.500" end="00:14:07.180" style="s2">need that sample time I&#39;m thinking of</p>
+<p begin="00:14:05.080" end="00:14:10.780" style="s2">blocks like the buffer block like PID</p>
+<p begin="00:14:07.180" end="00:14:12.910" style="s2">blocks or any block that would need an</p>
+<p begin="00:14:10.780" end="00:14:15.610" style="s2">input sample time I hope this gives you</p>
+<p begin="00:14:12.910" end="00:14:18.520" style="s2">a good base to start playing with this</p>
+<p begin="00:14:15.610" end="00:14:21.610" style="s2">dual motor control setup for the future</p>
+<p begin="00:14:18.520" end="00:14:24.340" style="s2">as enhancements or things you can try</p>
+<p begin="00:14:21.610" end="00:14:27.760" style="s2">you can try to implement the sensor</p>
+<p begin="00:14:24.340" end="00:14:32.410" style="s2">based motor control algorithm using</p>
+<p begin="00:14:27.760" end="00:14:34.210" style="s2">either halls or QEP to do this you can</p>
+<p begin="00:14:32.410" end="00:14:37.900" style="s2">type on your MATLAB prompt there is a</p>
+<p begin="00:14:34.210" end="00:14:41.560" style="s2">standard demo if you type C 2806 9:00</p>
+<p begin="00:14:37.900" end="00:14:45.840" style="s2">p.m. sm FOC that will help you implement</p>
+<p begin="00:14:41.560" end="00:14:49.150" style="s2">the hall sensor based position sensing</p>
+<p begin="00:14:45.840" end="00:14:50.580" style="s2">there are other shipping demos like the</p>
+<p begin="00:14:49.150" end="00:14:54.550" style="s2">C 2808</p>
+<p begin="00:14:50.580" end="00:14:59.230" style="s2">PMS M FOC this one will show you how to</p>
+<p begin="00:14:54.550" end="00:14:59.590" style="s2">use a QEP to get the position of the</p>
+<p begin="00:14:59.230" end="00:15:03.220" style="s2">motor</p>
+<p begin="00:14:59.590" end="00:15:06.280" style="s2">there are also demos that will show you</p>
+<p begin="00:15:03.220" end="00:15:09.280" style="s2">how to use the CLA so we can put the FOC</p>
+<p begin="00:15:06.280" end="00:15:12.190" style="s2">algorithm on the CLA and therefore save</p>
+<p begin="00:15:09.280" end="00:15:15.190" style="s2">a lot of CPU time to do some lower</p>
+<p begin="00:15:12.190" end="00:15:16.170" style="s2">priority tasks the CLA would require a</p>
+<p begin="00:15:15.190" end="00:15:18.240" style="s2">conversion</p>
+<p begin="00:15:16.170" end="00:15:21.630" style="s2">the algorithm to the floating point</p>
+<p begin="00:15:18.240" end="00:15:23.639" style="s2">there is a shipping demo that will show</p>
+<p begin="00:15:21.630" end="00:15:29.339" style="s2">you how to use the CLA if you type C</p>
+<p begin="00:15:23.639" end="00:15:33.089" style="s2">2806 9 just tab it and you have C 2806</p>
+<p begin="00:15:29.339" end="00:15:36.870" style="s2">9p MSM FOC CLA that will show you how to</p>
+<p begin="00:15:33.089" end="00:15:40.050" style="s2">use the CLA and this CLA demo is also</p>
+<p begin="00:15:36.870" end="00:15:42.029" style="s2">using Hall sensors as a position</p>
+<p begin="00:15:40.050" end="00:15:43.829" style="s2">technique you could also do parameter</p>
+<p begin="00:15:42.029" end="00:15:46.110" style="s2">tuning and data logging via external</p>
+<p begin="00:15:43.829" end="00:15:49.500" style="s2">mode there is a canned connector on the</p>
+<p begin="00:15:46.110" end="00:15:52.350" style="s2">f28 o-69 launchpad you can go through</p>
+<p begin="00:15:49.500" end="00:15:55.139" style="s2">our external mode based on can demos to</p>
+<p begin="00:15:52.350" end="00:15:58.139" style="s2">start logging data and tune parameters</p>
+<p begin="00:15:55.139" end="00:16:02.160" style="s2">like PID gains while the motors are</p>
+<p begin="00:15:58.139" end="00:16:06.660" style="s2">spinning you can type C 28 X underscore</p>
+<p begin="00:16:02.160" end="00:16:11.370" style="s2">CCP and that is a good starting point</p>
+<p begin="00:16:06.660" end="00:16:13.290" style="s2">for external mode based on can another</p>
+<p begin="00:16:11.370" end="00:16:14.970" style="s2">good Avenue to pursue would be to</p>
+<p begin="00:16:13.290" end="00:16:18.360" style="s2">connect the two motors physically</p>
+<p begin="00:16:14.970" end="00:16:21.089" style="s2">together and start having one acting as</p>
+<p begin="00:16:18.360" end="00:16:23.399" style="s2">a load while you actively test the the</p>
+<p begin="00:16:21.089" end="00:16:25.709" style="s2">first motor I hope this helps and I hope</p>
+<p begin="00:16:23.399" end="00:16:28.940" style="s2">this gives you a lot of ideas to try</p>
+<p begin="00:16:25.709" end="00:16:28.940" style="s2">thanks for watching</p>
+</div>
+</body>
+</tt>

@@ -1,0 +1,383 @@
+00:00:00,000 --> 00:00:08,633
+Previously, we discussed some important concepts behind field-oriented control such as Clarke and Park transforms
+
+00:00:08,633 --> 00:00:16,766
+and space vector modulation. Understanding these fundamental concepts is important when designing a FOC algorithm.
+
+00:00:16,766 --> 00:00:22,533
+However, that’s not going to be sufficient because motor control is a complex process
+
+00:00:22,533 --> 00:00:29,733
+and there’s so much more that you need to consider when designing and implementing FOC algorithms.
+
+00:00:29,733 --> 00:00:36,200
+Motor control engineers perform various tasks ranging from plant modeling to control design and
+
+00:00:36,200 --> 00:00:41,900
+algorithm development to production implementation on a microprocessor or FPGA.
+
+00:00:41,900 --> 00:00:48,566
+In this video, we’re not going to be able to cover everything but focus on a few of these topics.
+
+00:00:48,566 --> 00:00:53,866
+We’ll give you 10 practical considerations for implementing FOC.
+
+00:00:53,866 --> 00:00:59,766
+Throughout this video, I’ll be sharing with you some resources on these topics including videos and
+
+00:00:59,766 --> 00:01:08,000
+reference examples which use this motor kit from Texas Instruments. Note that reference examples can be used
+
+00:01:08,000 --> 00:01:17,133
+for both simulation and code generation. You can test and verify your control algorithm in desktop simulations before you
+
+00:01:17,133 --> 00:01:26,200
+generate code from your algorithm and deploy it to hardware. Please find the links to shared resources in the video descriptions.
+
+00:01:26,200 --> 00:01:32,866
+Let’s first talk about the FOC architecture which we introduced in the previous video.
+
+00:01:32,866 --> 00:01:40,300
+We have two feedback loops to control the Iq and Id currents at their desired values.
+
+00:01:40,300 --> 00:01:50,500
+This part of the algorithm represents the current or torque control and forms the innermost loop of the complete motor control
+
+00:01:50,500 --> 00:02:00,433
+algorithm. Other common control modes are speed and position control. Speed control is a cascaded loop around the current control
+
+00:02:00,433 --> 00:02:08,466
+loops. In speed control, we want the motor to follow a speed reference with the use of this controller.
+
+00:02:08,466 --> 00:02:18,333
+The output of the controller generates the input to the innermost current loops, the reference values for Iq and Id currents.
+
+00:02:18,333 --> 00:02:23,533
+Position control is just another cascaded loop around the speed control loop.
+
+00:02:23,533 --> 00:02:33,233
+In position control, the controller tracks a position reference and generates the input for the speed control loop.
+
+00:02:33,233 --> 00:02:43,500
+To achieve efficient motor control, the control algorithm needs to run at high sampling rates. In a cascaded control structure like this,
+
+00:02:43,500 --> 00:02:49,333
+the inner control loops need to respond much faster than the outer control loops.
+
+00:02:49,333 --> 00:02:54,766
+This example here uses FOC to control the speed of a PMSM motor.
+
+00:02:54,766 --> 00:03:01,033
+The different colors indicate the sample times of the different loops of the algorithm.
+
+00:03:01,033 --> 00:03:05,533
+We see that the innermost current loop runs at 20kHz.
+
+00:03:05,533 --> 00:03:14,766
+As a rule of thumb, the outer loop in this case the speed loop needs to run at least 10 times slower than the inner loop.
+
+00:03:14,766 --> 00:03:22,133
+So, the speed loop runs at 2kHz. If we had a position control loop that would
+
+00:03:22,133 --> 00:03:29,300
+then run at 200Hz that is 10 times slower than the speed control loop.
+
+00:03:29,300 --> 00:03:36,566
+One of the important things to note here is that FOC algorithm requires the knowledge of the rotor position.
+
+00:03:36,566 --> 00:03:46,533
+These values can be either measured using sensors or they can be estimated using observer-based techniques.
+
+00:03:46,533 --> 00:03:57,333
+Let’s focus on the sensor-based methods first. In some cases, you use a motor with a sensor that lets you measure the rotor position.
+
+00:03:57,333 --> 00:04:07,566
+Commonly used sensors in PMSMs include Quadrature encoders and Hall sensors. To understand how these sensors are used to
+
+00:04:07,566 --> 00:04:15,600
+measure the rotor position in FOC, you may want to check out these reference examples. This one lets
+
+00:04:15,600 --> 00:04:23,933
+you implement FOC using a quadrature encoder. Under the current control subsystem, the sensor driver block lets you read
+
+00:04:23,933 --> 00:04:32,966
+the quadrature encoder pulses which are then converted to angular rotor position and speed by these blocks, respectively.
+
+00:04:32,966 --> 00:04:40,800
+You can generate code from this model and deploy to hardware to get your motor spinning.
+
+00:04:40,800 --> 00:04:48,333
+Here, we change the speed reference to different values and see how the motor tracks the commanded speed.
+
+00:04:48,333 --> 00:04:55,133
+Next we’ll talk about sensor calibration. For the sensors you’re using in FOC,
+
+00:04:55,133 --> 00:05:03,433
+you will need to perform sensor calibration in order to remove the sensor offset and accurately calculate the current and position
+
+00:05:03,433 --> 00:05:10,566
+feedback values. Here are a few examples that walk you through the sensor calibration process.
+
+00:05:10,566 --> 00:05:20,333
+Each example comes with a target and a host model. Once we generate code from the target model and download to the processor,
+
+00:05:20,333 --> 00:05:31,266
+we use the host model which is running on our computer to communicate with the target.
+Let’s discuss current sensor calibration briefly.
+
+00:05:31,266 --> 00:05:42,966
+Phase currents are measured using analog to digital converters or ADCs. In order to find the ADC offsets, we need to read the ADC counts
+
+00:05:42,966 --> 00:05:50,166
+when there are no phase currents in the motor. That’s why the motor is disconnected from the inverter.
+
+00:05:50,166 --> 00:05:59,900
+Once we follow the steps provided in this example, the target model will continuously read the ADC counts and send them to
+
+00:05:59,900 --> 00:06:07,666
+the host model. The mean value of the ADC readings will give us the ADC offsets.
+
+00:06:07,666 --> 00:06:18,333
+We follow a similar workflow for calibrating offsets of Hall sensors and quadrature encoders. In these examples,
+
+00:06:18,333 --> 00:06:26,366
+the target model is a unique algorithm that uses open-loop control to run the motor at a constant speed.
+
+00:06:26,366 --> 00:06:36,000
+The model lets us read the rotor position measured by the position sensor and compares the measured value to the open-loop rotor
+
+00:06:36,000 --> 00:06:43,766
+position which is the reference generated in the open-loop control algorithm. The difference between the open-loop rotor position and the
+
+00:06:43,766 --> 00:06:49,166
+measured rotor position gives us the position sensor offset.
+
+00:06:49,166 --> 00:06:58,166
+We talked about the sensor-based methods to measure the rotor position. Next, we’ll discuss sensorless field-oriented control.
+
+00:06:58,166 --> 00:07:08,200
+In some cases, you may want to perform motor control without a sensor which might be due to costs associated with the use of a sensor.
+
+00:07:08,200 --> 00:07:16,766
+The alternative method to sensor-based control is to use a sensorless approach to estimate rotor position feedback.
+
+00:07:16,766 --> 00:07:26,533
+This example lets you use observer-based techniques such as a sliding mode observer or a flux observer for implementing sensorless
+
+00:07:26,533 --> 00:07:37,066
+field-oriented control. You can choose either of these observers as a position estimator. The rotor position estimation is carried out under
+
+00:07:37,066 --> 00:07:47,566
+the current control subsystem. When we navigate as seen here, we can view the observer blocks used by this FOC algorithm.
+
+00:07:47,566 --> 00:07:57,233
+Both blocks take the same inputs which are the measured voltages and currents. Recall that these voltages and currents were computed by
+
+00:07:57,233 --> 00:08:07,766
+these transforms in the current control section of the FOC algorithm. Similarly, if we now navigate to current control in this example,
+
+00:08:07,766 --> 00:08:13,900
+we see that the inputs to the observer blocks are the voltages computed by the Inverse Park transform and the currents computed by
+
+00:08:13,900 --> 00:08:26,533
+the Clarke transform. The observers then output the estimated rotor position of the motor and other estimated values such as the rotor
+
+00:08:26,533 --> 00:08:30,533
+flux and torque. After discussing the sensor-based and
+
+00:08:30,533 --> 00:08:38,633
+sensorless methods, we’ll now talk about motor and inverter modeling which is essential in developing a FOC algorithm.
+
+00:08:38,633 --> 00:08:45,500
+Control design is an iterative process and requires a lot of testing with the system in closed-loop.
+
+00:08:45,500 --> 00:08:54,600
+Oftentimes, the motor we want to control is driving or a part of a much larger and complex system which might be expensive to operate.
+
+00:08:54,600 --> 00:09:02,733
+But more importantly without a stabilizing controller, we may damage the whole system which may also lead to safety problems.
+
+00:09:02,733 --> 00:09:11,000
+Because of all these reasons, control engineers typically develop a representative model of the actual physical system, in this
+
+00:09:11,000 --> 00:09:16,366
+case the motor and inverter, and then design and test the controllers against
+
+00:09:16,366 --> 00:09:22,300
+that model using simulation before deploying the controller on the real system.
+
+00:09:22,300 --> 00:09:28,466
+To create a plant model of our motor, we need to know the motor parameters that are listed here.
+
+00:09:28,466 --> 00:09:36,700
+Typically, we would find this information in the motor datasheet. But in some cases, the datasheet is not available.
+
+00:09:36,700 --> 00:09:43,433
+Or even though the motor parameters are available, sometimes simulations performed with the model created
+
+00:09:43,433 --> 00:09:48,466
+based on the given parameters doesn’t match the real-world motor behavior.
+
+00:09:48,466 --> 00:09:55,600
+The solution to this is parameter estimation. This example here lets you estimate the parameters of a PMSM
+
+00:09:55,600 --> 00:10:06,166
+that runs with this particular TI microcontroller and inverter listed here. The model runs a set of instrumented tests on the motor
+
+00:10:06,166 --> 00:10:15,433
+to collect input and output data and then based on the measured data estimates the motor parameters such as the stator resistance,
+
+00:10:15,433 --> 00:10:23,200
+d and q axis inductances, back-emf constant, motor inertia and friction constant.
+
+00:10:23,200 --> 00:10:32,033
+Once the parameters are estimated, you can either save them in a file or create a new model that will include a PMSM block
+
+00:10:32,033 --> 00:10:40,733
+parameterized with the estimated values of the motor parameters. To learn how to run this model and perform motor parameter
+
+00:10:40,733 --> 00:10:45,500
+estimation, check out the video link given in the description.
+
+00:10:45,500 --> 00:10:55,033
+You can now attach this motor model to an average value inverter for accurate closed-loop simulations of motor dynamics.
+
+00:10:55,033 --> 00:11:01,966
+Based on your needs, you can also create inverter and motor models at different levels of fidelity.
+
+00:11:01,966 --> 00:11:09,366
+Here’s another example that uses this converter which lets us choose the switching device for the inverter.
+
+00:11:09,366 --> 00:11:20,000
+For example, we can use ideal switching or switches like IGBTs or MOSFETs. When we simulate with these low and high fidelity
+
+00:11:20,000 --> 00:11:29,433
+models, this is what we will get for the speeds, phase current and voltages and space vector modulation waveforms.
+
+00:11:29,433 --> 00:11:35,200
+The signals in yellow reflect the effect of switching in the inverter with the high-fidelity model
+
+00:11:35,200 --> 00:11:44,200
+whereas the responses in blue show the simulation results with the average value inverter. The examples we discussed here use
+
+00:11:44,200 --> 00:11:53,133
+equation-based motor models or lumped parameter models but you can create simulations to model saturation and spatial
+
+00:11:53,133 --> 00:11:55,033
+harmonics.
+
+00:11:55,033 --> 00:12:04,000
+Once you complete motor and inverter modeling, in the next step you need to tune the gains for the current and speed control loops.
+
+00:12:04,000 --> 00:12:13,266
+One option is to perform rule-based tuning by using the capabilities available to compute the controller gains of the current and speed loops
+
+00:12:13,266 --> 00:12:21,200
+once you estimate motor parameters. Once the gains are computed, system design can be analyzed
+
+00:12:21,200 --> 00:12:31,266
+with bode, root-locus, and step response plots.
+Alternatively, you can leverage autotuning techniques to automatically tune the controller
+
+00:12:31,266 --> 00:12:41,133
+gains of your FOC algorithm. This example runs with the Speedgoat motor control kit which includes a real-time target machine with the
+
+00:12:41,133 --> 00:12:51,933
+inverter and a PMSM. It uses the FOC Autotuner block to compute the gains of the Iq, Id and speed control loops that are
+
+00:12:51,933 --> 00:13:02,200
+implemented under this subsystem. As we’ll see shortly, the autotuning is performed in real-time while the deployed model is running on
+
+00:13:02,200 --> 00:13:12,866
+the target driving the actual motor. Once you build the model and load the application to Speedgoat target, the model first uses the
+
+00:13:12,866 --> 00:13:24,133
+initial gain values to control the motor at different speeds. The FOC autotuning starts here and fine-tunes the gains after running a
+
+00:13:24,133 --> 00:13:33,900
+series of experiments that inject perturbation signals to the motor. The resulting motor response with the tuned gains shows us how
+
+00:13:33,900 --> 00:13:41,833
+the tracking has improved compared to the response with the initial gains. For more information on FOC autotuning,
+
+00:13:41,833 --> 00:13:45,400
+feel free to check out these videos.
+
+00:13:45,400 --> 00:13:54,066
+After testing the control algorithm using closed-loop simulations, the last step is to generate code from your FOC algorithm and deploy it to
+
+00:13:54,066 --> 00:14:04,700
+the embedded microcontroller for spinning your motor. The examples we showed so far used the TI processor but you can target
+
+00:14:04,700 --> 00:14:16,133
+any processor with ANSI C code. For code generation, you can partition your model into algorithmic and hardware-specific parts.
+
+00:14:16,133 --> 00:14:25,500
+This means you can generate code separately from your FOC algorithm and then sensor and PWM driver peripherals.
+
+00:14:25,500 --> 00:14:34,433
+The driver blocks implement the current and position sensors as well as PWM writes whereas the FOC algorithm implements
+
+00:14:34,433 --> 00:14:44,733
+the speed and current loops. This is the example we’ve seen before which implements FOC using quadrature encoder for this
+
+00:14:44,733 --> 00:14:54,266
+TI motor kit. Using this example, you can run closed-loop simulations and when you’re ready to move on to production, you can
+
+00:14:54,266 --> 00:15:06,633
+generate code and deploy it to the TI processor. To view the required steps of this process, don’t forget to check out this video.
+
+00:15:06,633 --> 00:15:14,600
+Once the code has been deployed, you can use the host model to change the reference speed to the motor and also view how the
+
+00:15:14,600 --> 00:15:24,933
+reference speed and measured speed are changing. One thing to consider here is that before you deploy and run your algorithm to
+
+00:15:24,933 --> 00:15:34,400
+spin the actual motor, you can also perform processor-in-the-loop or PIL testing to test the performance of your controller on the
+
+00:15:34,400 --> 00:15:44,633
+embedded microcontroller. In PIL testing, the controller is deployed and executes on the processor whereas the motor and inverter
+
+00:15:44,633 --> 00:15:54,366
+model run on the host computer. Let’s use this model to perform PIL simulation with the current control algorithm.
+
+00:15:54,366 --> 00:16:04,433
+You first deploy the current control subsystem to the processor. Once you build code for this subsystem, it creates a new one called PIL.
+
+00:16:04,433 --> 00:16:13,066
+You can now replace the current control subsystem with the PIL block. After deployment, the current control algorithm
+
+00:16:13,066 --> 00:16:22,733
+executes on the processor but the controller will not be driving the actual motor, instead we’ll be performing closed-loop simulations with the
+
+00:16:22,733 --> 00:16:31,700
+motor and inverter model. You can also keep the current control subsystem to compare the algorithm execution on the host machine
+
+00:16:31,700 --> 00:16:39,766
+and in the PIL simulation. You can generate profiling report that includes the execution times of your control algorithm.
+
+00:16:39,766 --> 00:16:47,133
+The model we used to generate this report has the current loop sample time set to 50 microseconds.
+
+00:16:47,133 --> 00:16:54,533
+And the profiling report shows that the current loop runs in 5 microseconds on the embedded microcontroller
+
+00:16:54,533 --> 00:17:02,966
+which is efficient for the 50 microsecond sample time that we had specified for this model.
+
+00:17:02,966 --> 00:17:09,866
+Today, we discussed these 10 practical considerations for implementing field-oriented control.
+
+00:17:09,866 --> 00:17:18,866
+We also shared some examples and videos that can help you get started with designing and implementing your own FOC algorithm.
+
+00:17:18,866 --> 00:17:25,366
+These examples and most of the capabilities we discussed today are available in Motor Contol Blockset.
+
+00:17:25,366 --> 00:17:31,133
+So, you may want to check out this page for more information on Motor Control Blockset.
+
+00:17:31,133 --> 00:17:36,133
+To find the links to all the resources we covered in this video, please don’t forget to check out the video descriptions.
+

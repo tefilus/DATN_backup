@@ -1,0 +1,46 @@
+lên cho tôi agenda về ý tưởng đồ án tốt nghiệp theo thứ tự các nội dung sau:
+1. Ý tưởng đồ án: thiết kế, chế tạo bộ vô lăng điều khiển cho phần mềm mô phỏng lái xe ETS2
+2. Giới thiệu về ETS:
+	- Cách điều khiển hiện tại: dùng bàn phím và chuột
+	- Cách điều khiển nâng cao: sử dụng vô lăng gaming (~500 USD/1 unit)
+3. Lý do thực hiện đề tài:
+	- Chế tạo phần cứng phục vụ cho việc tập lái xe mô phỏng trên ETS2
+	- Tìm hiểu về cách thức hoạt động của bộ vô lăng và bàn đạp gaming
+	- Tìm hiểu cách thức giao tiếp giữa bộ vô lăng và PC, giữa bộ vô lăng và phần mềm ETS
+4. Những đề tài đã thực hiện (đã có người thực hiện thành công và có tutorial)
+	- DIY Projects for gaming steering wheel (Zudu Malli, https://www.youtube.com/watch?v=BxpwM4jKSDw&list=PLykYjjUxCjKz8iCkcE61MI_16MOiGtQ3d)
+	- DIY FFB Gaming steering wheel (...)
+	- DIY Gaming steering wheel (adding digital dashboard)
+	
+
+======================================================================================================================
+**********************************************************************************************************************
+
+### **AGENDA – Ý TƯỞNG ĐỒ ÁN TỐT NGHIỆP**  
+**Đề tài:** Thiết kế, chế tạo bộ vô lăng điều khiển cho phần mềm mô phỏng lái xe ETS2  
+
+#### **1. Giới thiệu về đề tài**  
+- Mô tả ý tưởng đồ án: thiết kế và chế tạo bộ vô lăng điều khiển tích hợp với phần mềm Euro Truck Simulator 2 (ETS2).  
+- Mục tiêu: Xây dựng một thiết bị vô lăng mô phỏng với chi phí hợp lý, hỗ trợ trải nghiệm lái xe chân thực hơn.  
+
+#### **2. Giới thiệu về ETS2**  
+- **Tổng quan về ETS2:** Phần mềm mô phỏng lái xe tải phổ biến với khả năng mô phỏng môi trường giao thông chân thực.  
+- **Các phương thức điều khiển hiện tại:**  
+  - Điều khiển bằng bàn phím và chuột (hạn chế về độ chân thực, khó thao tác).  
+  - Điều khiển bằng bộ vô lăng gaming chuyên nghiệp (cải thiện trải nghiệm nhưng giá thành cao, khoảng 500 USD).  
+
+#### **3. Lý do thực hiện đề tài**  
+- **Hỗ trợ tập lái xe mô phỏng trên ETS2** bằng phần cứng tự chế, giúp người dùng tiếp cận trải nghiệm lái xe thực tế với chi phí thấp.  
+- **Tìm hiểu nguyên lý hoạt động của bộ vô lăng và bàn đạp gaming**, nghiên cứu các cảm biến, bộ mã hóa góc quay (encoder), và lực phản hồi (force feedback - FFB).  
+- **Nghiên cứu giao tiếp giữa bộ vô lăng và PC, cũng như giữa vô lăng và phần mềm ETS2** (giao thức USB HID, DirectInput, XInput, CAN Bus nếu có).  
+
+#### **4. Tham khảo các dự án DIY đã thực hiện thành công**  
+- **DIY Projects for gaming steering wheel** – Zudu Malli (YouTube)  
+  - Link: [https://www.youtube.com/watch?v=BxpwM4jKSDw&list=PLykYjjUxCjKz8iCkcE61MI_16MOiGtQ3d](https://www.youtube.com/watch?v=BxpwM4jKSDw&list=PLykYjjUxCjKz8iCkcE61MI_16MOiGtQ3d)  
+  - Hướng dẫn chế tạo bộ vô lăng từ các linh kiện DIY, sử dụng Arduino, cảm biến Hall và encoder.  
+- **DIY FFB Gaming Steering Wheel** – Dự án chế tạo vô lăng có phản hồi lực.  
+- **DIY Gaming Steering Wheel (Adding Digital Dashboard)** – Hướng dẫn tích hợp màn hình hiển thị tốc độ, vòng tua máy, v.v.  
+
+---
+
+

@@ -1,0 +1,2 @@
+startup_stm32f407vgtx.o: \
+ C:/Users/21145/OneDrive/Desktop/genstm32f4/test/STM32CubeIDE/Application/User/Startup/startup_stm32f407vgtx.s

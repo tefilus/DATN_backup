@@ -1,0 +1,24 @@
+-IE:/GiaotrinhDH/DATN/FOCQepExample
+-IE:/GiaotrinhDH/DATN/FOCQepExample/untitled_ert_rtw
+-IC:/Program\ Files/MATLAB/R2023b/extern/include
+-IC:/Program\ Files/MATLAB/R2023b/simulink/include
+-IC:/Program\ Files/MATLAB/R2023b/rtw/c/src
+-IC:/Program\ Files/MATLAB/R2023b/rtw/c/src/ext_mode/common
+-IC:/Program\ Files/MATLAB/R2023b/rtw/c/ert
+-IC:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/armcortexmbase/scheduler/include
+-IC:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/armcortexmbase/xcp/include
+-IC:/Program\ Files/MATLAB/R2023b/rtw/c/src/ext_mode/serial
+-IC:/ProgramData/MATLAB/SupportPackages/R2023b/toolbox/shared/supportpackages/stm32/include
+-IC:/Program\ Files/MATLAB/R2023b/toolbox/target/shared/svd/common/include
+-IC:/ProgramData/MATLAB/SupportPackages/R2023b/3P.instrset/cmsis.instrset/CMSIS/Core/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2023b/3P.instrset/cmsis_dsp.instrset/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2023b/3P.instrset/cmsis_dsp.instrset/Include/dsp
+-IC:/ProgramData/MATLAB/SupportPackages/R2023b/toolbox/target/shared/freertos/include
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Drivers/STM32F4xx_HAL_Driver/Inc
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Middlewares/Third_Party/FreeRTOS/Source/include
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Drivers/CMSIS/Include
+-IC:/Users/21145/OneDrive/Desktop/genstm32f4/test/Core/Inc
